@@ -1,0 +1,119 @@
+
+{
+	"SOList": [{
+			"soNo": "138188",
+			"soName": "A301-275A-T",
+			"soDesc": "RB X-TAF6 ANTIBODY-TRIAL",
+			"soPrice": "$10",
+			"status": "Confirmed",
+			"soDate": "04/05/2019",
+			"soItems": [{
+					"soItemMaterial": "A301-275A-T",
+					"soItemMatShipTo": "New York",
+					"soItemMatInvoiceTo": "Jersey City",
+					"soItemMatStatus": "On the way"
+				}, {
+					"soItemMaterial": "A302-683A-T",
+					"soItemMatShipTo": "Oregan",
+					"soItemMatInvoiceTo": "Portland",
+					"soItemMatStatus": "Shipped"
+				}]
+		},
+		{
+			"soNo": "138185",
+			"soName": "A302-683A-T",
+			"soDesc": "RB X-LYN ANTIBODY-TRIAL",
+			"soPrice": "$20",
+			"status": "Shipping",
+			"soDate": "05/05/2019",
+			"soItems": [{
+					"soItemMaterial": "A303-439A-T",
+					"soItemMatShipTo": "California",
+					"soItemMatInvoiceTo": "SFO",
+					"soItemMatStatus": "Completed"
+				}, {
+					"soItemMaterial": "A303-687A-M",
+					"soItemMatShipTo": "Texas",
+					"soItemMatInvoiceTo": "Los Angeles",
+					"soItemMatStatus": "Cancelled"
+				}]
+		},
+		{
+			"soNo": "138184",
+			"soName": "A303-439A-T",
+			"soDesc": "RB X-TMEM106B ANTIBODY-TRIAL",
+			"soPrice": "$30",
+			"status": "Out Of Stock",
+			"soDate": "06/05/2019",
+			"soItems": [{
+					"soItemMaterial": "A521-285A-T",
+					"soItemMatShipTo": "Edison",
+					"soItemMatInvoiceTo": "Newark",
+					"soItemMatStatus": "Reached"
+				}, {
+					"soItemMaterial": "A322-114A-T",
+					"soItemMatShipTo": "Michigan",
+					"soItemMatInvoiceTo": "Detroit",
+					"soItemMatStatus": "Shipped"
+				}]
+		},
+		{
+			"soNo": "138178",
+			"soName": "A303-687A-M",
+			"soDesc": "RB X-TAF5 ANTIBODY-10 BLOTS",
+			"soPrice": "$40",
+			"status": "In Process",
+			"soDate": "06/05/2019",
+			"soItems": [{
+					"soItemMaterial": "B301-995A-T",
+					"soItemMatShipTo": "New York",
+					"soItemMatInvoiceTo": "Jersey City",
+					"soItemMatStatus": "Initial"
+				}, {
+					"soItemMaterial": "C562-683A-T",
+					"soItemMatShipTo": "Oregan",
+					"soItemMatInvoiceTo": "Portland",
+					"soItemMatStatus": "Cancelled"
+				}]
+		},
+		{
+			"soNo": "138172",
+			"soName": "A303-946A-T",
+			"soDesc": "RB X-RPS9 ANTIBODY-TRIAL",
+			"soPrice": "$50",
+			"status": "Initial",
+			"soDate": "07/05/2019",
+			"soItems": [{
+					"soItemMaterial": "X301-275A-T",
+					"soItemMatShipTo": "Philadelphia",
+					"soItemMatInvoiceTo": "Florida",
+					"soItemMatStatus": "Packing"
+				}, {
+					"soItemMaterial": "A552-683A-T",
+					"soItemMatShipTo": "North Carolina",
+					"soItemMatInvoiceTo": "Miami",
+					"soItemMatStatus": "Delivered"
+				}]
+		},
+		{
+			"soNo": "138165",
+			"soName": "A304-988A-M",
+			"soDesc": "RB X-DOCK5 ANTIBODY-10 BLOTS",
+			"soPrice": "$60",
+			"status": "Out Of Stock",
+			"soDate": "08/05/2019",
+			"soItems": [{
+					"soItemMaterial": "X301-275A-T",
+					"soItemMatShipTo": "London",
+					"soItemMatInvoiceTo": "UK",
+					"soItemMatStatus": "Initial"
+				}, {
+					"soItemMaterial": "Y772-683A-T",
+					"soItemMatShipTo": "Houston",
+					"soItemMatInvoiceTo": "New Mexico",
+					"soItemMatStatus": "Verifying"
+				}]
+		}
+
+	]
+}

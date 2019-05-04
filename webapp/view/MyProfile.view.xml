@@ -1,0 +1,105 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="ZBethyl.controller.MyProfile">
+	<App>
+		<pages>
+			<Page title="My Profile" showNavButton="true" navButtonPress="onNavBack">
+				<content>
+				    <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" text="Date Range:" id="__text0" textDirection="LTR" textAlign="Center"/>
+				    <DatePicker xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" width="200px" id="__picker0"/>
+				    <Label xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" width="20px" id="__label6" textAlign="Center"/>
+				    <DatePicker xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" width="200px" id="__picker0_copy"/>
+				    <IconTabBar id="__bar0">
+				        <items>
+				            <IconTabFilter text="My Orders" count="2" icon="sap-icon://task" id="__filter1">
+				            <content>
+				                <Table noDataText="Drop column list items here and columns in the area above" id="__table0">
+				                    <items>
+				                        <ColumnListItem id="__item3">
+				                            <cells>
+				                                <Link xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" text="138188" id="__link0_copy"/>
+				                                <Text text="AntiBody Trial 2 packs" id="__text1"/>
+				                                <Text text="In Process" id="__text2"/></cells>
+				                        </ColumnListItem>
+				                        <ColumnListItem id="__item4">
+				                            <cells>
+				                                <Link xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" text="138194" id="__link0"/>
+				                                <Text text="BLOTS 10" id="__text4"/>
+				                                <Text text="Complete" id="__text5"/></cells>
+				                        </ColumnListItem></items>
+				                    <columns>
+				                        <Column id="__column0">
+				                            <header>
+				                                <Label text="Order" id="__label0"/>
+				                            </header>
+				                        </Column>
+				                        <Column id="__column1">
+				                            <header>
+				                                <Label text="Description" id="__label1"/>
+				                            </header>
+				                        </Column>
+				                        <Column id="__column2">
+				                            <header>
+				                                <Label text="Status" id="__label2"/>
+				                            </header>
+				                        </Column></columns></Table>
+				            </content>
+				            </IconTabFilter>
+				            <IconTabFilter text="My Notifiations" count="3" icon="sap-icon://shipping-status" iconColor="Positive" id="__filter2">
+				                <content>
+				                    <Table noDataText="Drop column list items here and columns in the area above" id="__table1">
+				                        <items>
+				                            <ColumnListItem id="__item5">
+				                                <cells>
+				                                    <Text text="2156753" id="__text6"/>
+				                                    <Text text="Quaterly Maintenance" id="__text7"/>
+				                                    <Text text="Initial" id="__text8"/></cells>
+				                            </ColumnListItem>
+				                            <ColumnListItem id="__item6">
+				                                <cells>
+				                                    <Text text="2175814" id="__text9"/>
+				                                    <Text text="Smoke Detection" id="__text10"/>
+				                                    <Text text="Cancelled" id="__text11"/></cells>
+				                            </ColumnListItem>
+				                            <ColumnListItem xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" id="__item5_copy">
+				                                <cells>
+				                                    <Text text="2156757" id="__text6_copy"/>
+				                                    <Text text="Monthly Review" id="__text7_copy"/>
+				                                    <Text text="Completed" id="__text8_copy"/>
+				                                    </cells>
+				                                
+				                            </ColumnListItem></items>
+				                        <columns>
+				                            <Column id="__column3">
+				                                <header>
+				                                    <Label text="Notifications" id="__label3"/>
+				                                </header>
+				                            </Column>
+				                            <Column id="__column4">
+				                                <header>
+				                                    <Label text="Description" id="__label4"/>
+				                                </header>
+				                            </Column>
+				                            <Column id="__column5">
+				                                <header>
+				                                    <Label text="Status" id="__label5"/>
+				                                </header>
+				                            </Column></columns></Table>
+				                </content>
+				            </IconTabFilter>
+				            <IconTabFilter text="My Hours" count="18.45" icon="sap-icon://task" iconColor="Negative" id="__filter0">
+				                <content>
+				                    <List xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" noDataText="No data" id="__list0">
+				                        <items>
+				                            <StandardListItem title="Order 138188 - 12 hours 30 minutes" id="__item0"/>
+				                            <StandardListItem title="Notification 2156783 - 4 hours" id="__item1"/>
+				                            <StandardListItem title="Order 138052 - 2 hours 15 minutes" id="__item2"/>
+				                            </items>
+				                        
+				                    </List>
+				                </content>
+				            </IconTabFilter></items>
+				    </IconTabBar>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,23 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="ZBethyl.controller.Launchpad" displayBlock="true">
+	<App>
+		<pages>
+			<Page title="{i18n>title}" icon="sap-icon://electronic-medical-record">
+				<content>
+					<TileContainer editable="false" allowAdd="true" id="__container0">
+				        <tiles>
+				            <StandardTile title="Purchase Orders against Production Orders" info="PO" icon="sap-icon://my-sales-order" activeIcon="sap-icon://customer" infoState="Success" id="__tile0" removable="false" press="onClickPurchaseOrders"/>
+				            <StandardTile title="My Profile" info="History" icon="sap-icon://customer" activeIcon="sap-icon://customer" number="112" infoState="Success" id="__tile2" removable="false" press="onClickMyProfile"/>
+				            <StandardTile title="Equipment History" info="Functional Locations" icon="sap-icon://add-equipment" activeIcon="sap-icon://customer" infoState="Success" id="__tile1" removable="false" press="onClickEquipmentHistory"/>
+				            <StandardTile title="Service Orders" info="Order Details" icon="sap-icon://sales-order-item" activeIcon="sap-icon://customer" number="325" numberUnit="ORD" infoState="Success" id="__tile4" removable="false" press="onClickServiceOrders"/>
+				            <StandardTile title="Finance Report" info="Quaterly" icon="sap-icon://money-bills" activeIcon="sap-icon://customer" number="11400" numberUnit="USD" infoState="Success" id="__tile5" removable="false" press="onClickFinanceReport"/>
+				        </tiles>
+				    </TileContainer>
+				</content>
+			<headerContent>
+			    <sap.ui.core:Icon src="sap-icon://doctor" size="2em" xmlns:sap.ui.core="sap.ui.core" id="__icon1" tooltip="Bethyl"/>
+			    <Image width="140px" height="140px" id="__image0" src="ZBethyl/model/Bethyl_woodmark_RGB.png"/>
+			</headerContent>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

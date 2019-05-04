@@ -1,0 +1,174 @@
+{
+	"_version": "1.5.0",
+	"sap.app": {
+		"id": "ZBethyl",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": ["sap_hcb", "sap_belize"]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "ZBethyl.view.App",
+			"type": "XML",
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.ushell": {},
+				"sap.collaboration": {},
+				"sap.ui.comp": {},
+				"sap.uxap": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "ZBethyl.i18n.i18n"
+				}
+			},
+			"so": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "soList.json"
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "ZBethyl.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"bypassed": {
+					"target": ""
+				},
+				"async": true
+			},
+			"routes": [{
+				"name": "Launchpad",
+				"pattern": "",
+				"titleTarget": "",
+				"greedy": false,
+				"target": ["Launchpad"]
+			}, {
+				"name": "ServiceOrders",
+				"pattern": "ServiceOrders",
+				"titleTarget": "",
+				"greedy": false,
+				"target": ["ServiceOrders"]
+			}, {
+				"name": "PurchaseOrders",
+				"pattern": "PurchaseOrders",
+				"titleTarget": "",
+				"greedy": false,
+				"target": ["PurchaseOrders"]
+			}, {
+				"name": "MyProfile",
+				"pattern": "MyProfile",
+				"titleTarget": "",
+				"greedy": false,
+				"target": ["MyProfile"]
+			}, {
+				"name": "FinanceReport",
+				"pattern": "FinanceReport",
+				"titleTarget": "",
+				"greedy": false,
+				"target": ["FinanceReport"]
+			}, {
+				"name": "EquipmentHistory",
+				"pattern": "EquipmentHistory",
+				"titleTarget": "",
+				"greedy": false,
+				"target": ["EquipmentHistory"]
+			}],
+			"targets": {
+				"Launchpad": {
+					"viewType": "XML",
+					"transition": "",
+					"clearAggregation": "true",
+					"viewName": "Launchpad",
+					"viewId": "Launchpad",
+					"viewLevel": 1
+				},
+				"EquipmentHistory": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "EquipmentHistory",
+					"viewId": "EquipmentHistory",
+					"viewLevel": 2
+				},
+				"FinanceReport": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "FinanceReport",
+					"viewId": "FinanceReport",
+					"viewLevel": 2
+				},
+				"MyProfile": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "MyProfile",
+					"viewId": "MyProfile",
+					"viewLevel": 2
+				},
+				"PurchaseOrders": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "PurchaseOrders",
+					"viewId": "PurchaseOrders",
+					"viewLevel": 2
+				},
+				"ServiceOrders": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "ServiceOrders",
+					"viewId": "ServiceOrders",
+					"viewLevel": 2
+				}
+			}
+		}
+	}
+}

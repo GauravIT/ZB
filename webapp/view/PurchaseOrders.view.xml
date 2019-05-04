@@ -1,0 +1,144 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:f="sap.ui.layout.form" controllerName="ZBethyl.controller.PurchaseOrders">
+	<!--<App>-->
+	<!--	<pages>-->
+	<!--		<Page title="PurchaseOrders" showNavButton="true" navButtonPress="onNavBack">-->
+	<!--			<content>-->
+					
+	<!--			</content>-->
+	<!--		</Page>-->
+	<!--	</pages>-->
+	<!--</App>-->
+	<SplitApp id="idSplitApp" mode="ShowHideMode" initialDetail="idDetail" initialMaster="idMaster" orientationChange="onOrientationChange">
+		<masterPages>
+			<Page id="idMaster" title="Production Order List" icon="sap-icon://action" class="sapUiStdPage">
+				<SearchField width="100%" id="idSOSearch" placeholder="Search Production Order" liveChange="onSOSearch"/>
+				<content>
+					<List id="idSOList" class="sapUiResponsiveMargin" width="auto" items="{so>/SOList}">
+						<items>
+							<ObjectListItem title="{so>soName}" intro="{so>soNo}" type="Active" press="onListItemPress" number="{so>soPrice}">
+								 <firstStatus>
+									<ObjectStatus
+									text="{so>status}"
+									state="{
+									path: 'so>status',
+									formatter: '.formatstatus'
+									}" />
+								</firstStatus>
+								<attributes>
+									<ObjectAttribute text="{so>soDate}"></ObjectAttribute>
+								</attributes>
+							</ObjectListItem>
+						</items>
+					</List>
+				</content>
+			<customHeader>
+			    <Toolbar width="100%" id="__toolbar1">
+			        <content>
+			            <Button width="100px" id="__button0" icon="sap-icon://nav-back" press="onNavBack"/>
+			        </content>
+			    </Toolbar>
+			</customHeader>
+			<footer>
+			    <Toolbar width="100%" id="__toolbar2">
+			        <content><Button width="100px" id="__button1" icon="sap-icon://filter"/>
+			            <Button width="100px" id="__button2" icon="sap-icon://sort"/>
+			            <Button width="100px" id="__button3" icon="sap-icon://group"/>
+			        </content>
+			    </Toolbar>
+			</footer>
+			</Page>
+		</masterPages>
+		<detailPages>
+			<Page id="idDetail" title="Production Order Details" class="sapUiStdPage" showNavButton="false" navButtonText="Back" navButtonPress="onPressDetailBack">
+				<content>
+					<f:SimpleForm id="idSODetailForm" visible="false" editable="false" layout="ResponsiveGridLayout" labelSpanXL="5" labelSpanL="5" labelSpanM="5" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="3" emptySpanL="3" emptySpanM="3" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+						<f:content>
+							<Label text="Production Order ID"/>
+							<Text id="idSoNo"/>
+							<Label text="Production Order Name"/>
+							<Text id="idSoName"/>
+							<Label text="Production Order Description"/>
+							<Text id="idSoDesc"/>
+							<Label text="Production Order Price"/>
+							<Text id="idSoPrice"/>
+							<Label text="Production Order Date"/>
+							<Text id="idSoDate"/>
+						</f:content>
+					</f:SimpleForm>
+					<IconTabBar id="productionOrdersTabBar" visible="false">
+					    <items>
+					        <IconTabFilter text="Open" count="10" icon="sap-icon://task" iconColor="Critical" id="__filter1">
+					            <content>
+					                
+					                
+					                
+					                
+					                
+					                	<Table id="idProductsTable" inset="false">
+					                		 <!--items="{so>/SOList/soItems}"-->
+											<headerToolbar>
+												<Toolbar>
+													<content>
+														<Title text="Items" level="H2"/>
+														<ToolbarSpacer/>
+														
+													</content>
+												</Toolbar>
+											</headerToolbar>
+											<columns>
+												<Column width="12em">
+													<Text text="Material"/>
+												</Column>
+												<Column minScreenWidth="Tablet" demandPopin="true">
+													<Text text="Ship To"/>
+												</Column>
+												<Column minScreenWidth="Desktop" demandPopin="true" hAlign="End">
+													<Text text="Invoice To"/>
+												</Column>
+												<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+													<Text text="Status"/>
+												</Column>
+												
+											</columns>
+											<items>
+												<!--<ColumnListItem>-->
+												<!--	<cells>-->
+														<!--<ObjectIdentifier text="{so>soItemMaterial}"/>-->
+												<!--		<Text text="{soItemMaterial}"/>-->
+												<!--		<Text text="{soItemMatShipTo}"/>-->
+												<!--		<Text text="{soItemMatInvoiceTo}"/>-->
+												<!--		<Text text="{soItemMatStatus}"/>-->
+												<!--	</cells>-->
+												<!--</ColumnListItem>-->
+											</items>
+										</Table>
+					                
+					                
+					                
+					                
+					            </content>
+					        </IconTabFilter>
+					        <IconTabFilter text="Shipped" count="5" icon="sap-icon://shipping-status" iconColor="Positive" id="__filter2"/>
+					        <IconTabFilter text="Attachments" count="3" icon="sap-icon://attachment-text-file" id="__filter3">
+					            <content>
+					                <UploadCollection id="__collection0">
+					                    <items>
+					                        <UploadCollectionItem contributor="Contributor1" fileName="Sample Details" uploadedDate="Fri May 03 2019" id="__item4"/>
+					                        <UploadCollectionItem contributor="Contributor1" fileName="Medical Testing Evidence" uploadedDate="Fri May 03 2019" id="__item5"/>
+					                        <UploadCollectionItem contributor="Contributor1" fileName="Usage Guidelines" uploadedDate="Fri May 03 2019" id="__item6"/></items>
+					                </UploadCollection>
+					            </content>
+					        </IconTabFilter></items>
+					</IconTabBar>
+				</content>
+			<footer>
+			    <Toolbar width="100%" id="__toolbar3">
+			        <content>
+			            <Button text="Confirm" width="140px" id="__button4" icon="sap-icon://accept"/>
+			        </content>
+			    </Toolbar>
+			</footer>
+			</Page>
+		</detailPages>
+	</SplitApp>
+</mvc:View>
